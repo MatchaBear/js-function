@@ -1,19 +1,31 @@
-const operator = prompt('Enter operator (either " + ", " - ", " x ", or " / "');
-const firstNumber = Number(prompt("Enter first number"));
-const secondNumber = Number(prompt("Enter second number"));
-
-function calcApp(firstNumber, secondNumber) {
+function runCalculatorApp(operator, firstNumber, secondNumber) {
   if (operator == "+") {
-    return window.alert((result = firstNumber + secondNumber));
+    const result = firstNumber + secondNumber;
+    const formattedResult = `${firstNumber} + ${secondNumber} = ${result}`;
+    window.alert(formattedResult);
   } else if (operator == "-") {
-    return (result = firstNumber - secondNumber);
+    const result = firstNumber - secondNumber;
+    const formattedResult = `${firstNumber} - ${secondNumber} = ${result}`;
+    window.alert(formattedResult);
   } else if (operator == "*") {
-    return (result = firstNumber * secondNumber);
+    const result = firstNumber * secondNumber;
+    const formattedResult = `${firstNumber} × ${secondNumber} = ${result}`;
+    window.alert(formattedResult);
   } else if (operator == "/") {
-    return (result = firstNumber / secondNumber);
+    const result = firstNumber / secondNumber;
+    const formattedResult = `${firstNumber} ÷ ${secondNumber} = ${result}`;
+    window.alert(formattedResult);
   } else {
     return window.alert("Please enter correct operator");
   }
 }
 
-calcApp();
+function runApp() {
+  const operator = prompt("Enter operator, either + - * /");
+  const firstNumber = Number(prompt("Enter first number"));
+  const secondNumber = Number(prompt("Enter second number"));
+
+  runCalculatorApp(operator, firstNumber, secondNumber);
+}
+
+runApp();
