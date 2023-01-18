@@ -1,6 +1,6 @@
 const operator = prompt('Enter operator (either " + ", " - ", " x ", or " / "');
-const firstNumber = prompt("Enter first number");
-const secondNumber = prompt("Enter second number");
+const firstNumber = Number(prompt("Enter first number"));
+const secondNumber = Number(prompt("Enter second number"));
 
 function calcApp(firstNumber, secondNumber) {
   if (operator == "+") {
@@ -15,3 +15,5 @@ function calcApp(firstNumber, secondNumber) {
     return window.alert("Please enter correct operator");
   }
 }
+
+calcApp();
